@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :carts
   root 'store#index', as: 'store_index' # root path [controller#method] , as keyword to define specific name to it
   # get 'store/index'
 
