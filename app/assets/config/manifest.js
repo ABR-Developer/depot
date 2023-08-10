@@ -5,4 +5,4 @@
 
 
 config.assets.enabled = true
-config.assets.precompile += %w( application.css application.js )
+// config.assets.precompile += %w( application.scss  application.js )
