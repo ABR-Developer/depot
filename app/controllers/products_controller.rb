@@ -50,6 +50,7 @@ class ProductsController < ApplicationController
 
   # DELETE /products/1 or /products/1.json
   def destroy
+    # LineItem.where(:product => @product).destroy_all
     @product.destroy
 
     respond_to do |format|
