@@ -33,6 +33,12 @@ class LineItemsController < ApplicationController
         # format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created.' }
         # format.html { redirect_to @line_item.cart}
         format.html { redirect_to store_index_url}
+        format.js { @current_item = @line_item }
+        """
+            1) To specify that if Ajax/ Javascript request call occur don't redirect to the route above.
+            2) To specify that response wil also be of javascrpit/json formate.
+            3) The optional block { @current_item = @line_item } to specify that response wil update only specific field
+        """
         format.json { render :show, status: :created, location: @line_item }
       else
         # format.html { render :new, status: :unprocessable_entity }
